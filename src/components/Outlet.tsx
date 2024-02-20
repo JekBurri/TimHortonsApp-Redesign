@@ -5,6 +5,7 @@ import Deals from "./Deals";
 import Scan from "./Scan";
 import Order from "./Order";
 import Checkout from "./Checkout";
+import Cart from "./Cart";
 
 export default function Outlet() {
   const { view, setView } = useContext(AppContext);
@@ -21,6 +22,8 @@ export default function Outlet() {
         <Order />
       ) : view.page === "checkout" ? (
         <Checkout />
+      ) : view.page === "cart" ? (
+        <Cart />
       ) : (
         <div>404</div>
       )}

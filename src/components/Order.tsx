@@ -57,9 +57,18 @@ export default function Order() {
 
     return (
       <div className="menu-items">
-        <button onClick={handleBackButtonClick} className="back-button">
-          Back
-        </button>
+        <div className="flex gap-4">
+            <button onClick={handleBackButtonClick} className="rounded-lg p-2 text-2xl red-espresso text-white font-bold">
+            Back
+            </button>
+            <button
+            onClick={() => setView({ ...view, page: "checkout" })}
+            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
+            >
+            Checkout
+            </button>
+
+        </div>
         <h2 className="font-bold text-2xl text-center p-2">{selectedCategory}</h2>
         {items.map((item) => (
           <div key={item} className="menu-item">
@@ -118,15 +127,11 @@ export default function Order() {
   return (
     <div className="container creamy-latte">
       <Header />
-      <div className="flex flex-col justify-center p-10">
+      <div className="mt-8 p-10">
+        <p className="text-3xl font-bold mb-4">Menu</p>
         {renderMenuItems()}
 
-        <button
-          onClick={() => setView({ ...view, page: "checkout" })}
-          className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
-        >
-          Checkout
-        </button>
+        
       </div>
     </div>
   );

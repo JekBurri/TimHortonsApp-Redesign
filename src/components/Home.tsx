@@ -20,7 +20,7 @@ export default function Home() {
           }
           className="rounded-lg p-4 text-2xl red-espresso text-white font-bold"
         >
-          Offers
+          Deals
         </button>
         <button
           onClick={() =>
