@@ -7,13 +7,16 @@ export const AppContext = React.createContext<any>(null);
 
 function App() {
   const [view, setView] = useState({
-    page: "home"
+    page: "home",
+    cart: []
   });
 
   return (
     <AppContext.Provider value={{view, setView}}>
-      <Outlet />
-      <Navbar />
+      <main className="flex flex-col max-w-screen-sm mx-auto h-screen justify-between creamy-latte">
+        <Outlet />
+        <Navbar />
+      </main>
     </AppContext.Provider>
   )
 }

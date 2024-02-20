@@ -29,3 +29,46 @@
 .red-espresso {
   background-color: #c9002c;
 }
+
+#root {
+  background-color: black;
+};
+
+/* temp */
+.menu-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-button {
+  background-color: #c9002c; /* Red-Espresso color */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-items {
+  padding: 20px;
+}
+
+.back-button {
+  background-color: #d7bba0; /* Cappuccino Blush color */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: #fefefe; /* Vanilla Cream color */
+  padding: 10px;
+  border-radius: 5px;
+}

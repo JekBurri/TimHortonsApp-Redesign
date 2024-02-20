@@ -6,7 +6,7 @@ export default function Navbar() {
     const {view, setView} = useContext(AppContext);
 
     return(
-        <div className="flex justify-between bottom-0 absolute creamy-latte w-full p-2 px-6">
+        <div className="flex justify-between bottom-0 red-espresso text-white font-bold p-2 px-6">
             <div onClick={()=>setView({...view, page:"home"})} className="flex flex-col justify-center">
                 <img src="/public/vite.svg" alt="" />
                 <span>Home</span>
