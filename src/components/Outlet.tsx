@@ -4,12 +4,13 @@ import Home from "./Home";
 import Deals from "./Deals";
 import Scan from "./Scan";
 import Order from "./Order";
+import Checkout from "./Checkout";
 
 export default function Outlet() {
   const { view, setView } = useContext(AppContext);
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 overflow-y-auto">
       {view.page === "home" ? (
         <Home />
       ) : view.page === "scan" ? (
@@ -18,8 +19,10 @@ export default function Outlet() {
         <Deals />
       ) : view.page === "order" ? (
         <Order />
+      ) : view.page === "checkout" ? (
+        <Checkout />
       ) : (
-        <div></div>
+        <div>404</div>
       )}
     </div>
   );

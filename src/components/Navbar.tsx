@@ -15,10 +15,10 @@ export default function Navbar() {
                 <img src="/public/vite.svg" alt="" />
                 <span>Menu</span>
             </div>
-            <div onClick={()=>setView({...view, page:"scan"})} className="flex flex-col justify-center">
+            {/* <div onClick={()=>setView({...view, page:"scan"})} className="flex flex-col justify-center">
                 <img src="/public/vite.svg" alt="" />
                 <span>Scan</span>
-            </div>
+            </div> */}
             <div onClick={()=>setView({...view, page:"deals"})} className="flex flex-col justify-center">
                 <img src="/public/vite.svg" alt="" />
                 <span>Deals</span>

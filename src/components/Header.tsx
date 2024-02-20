@@ -17,7 +17,7 @@ export default function Header() {
        <p className="text-center text-sm">920 Steveston Highway</p>
       </div>
       <div className="flex gap-2 justify-center my-2">
-       <button className="rounded-lg p-2 border font-bold">Cart <span>{totalCount}</span></button>
+       <button className="rounded-lg p-2 border font-bold">Cart <span>{totalCount >0 ? "("+totalCount+")":""}</span></button>
       </div>
     </div>
   );
