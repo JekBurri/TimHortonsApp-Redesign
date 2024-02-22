@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import Header from "./Header";
 import { menu } from "../db/menu.js";
 import { AppContext } from "../App.js";
-import { useEffect } from 'react';
 
 export default function Order() {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -35,12 +34,12 @@ export default function Order() {
     const categories = Object.keys(menu);
 
     return (
-      <div className="flex flex-col gap-2 p-10">
+      <div className="flex flex-col gap-4 p-10">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => handleCategoryClick(category)}
-            className="category-button"
+            className="category-button text-xl"
           >
             {category}
           </button>
@@ -83,9 +82,9 @@ export default function Order() {
                 ${menu[selectedCategory][item].cost.toFixed(2)}
               </p>
               {cart.find((cartItem: any) => cartItem.item === item && cartItem.count > 0 ) ? (
-                <div className="red-espresso">
+                <div className="flex red-espresso rounded-md">
                   <button
-                    className="p-2 red-espresso text-white"
+                    className="p-2 red-espresso text-white flex self-center"
                     onClick={() =>
                       handleCartUpdate(
                         item,
@@ -96,10 +95,10 @@ export default function Order() {
                   >
                     -
                   </button>
-                  <span className=" p-2 font-bold text-white">{cart.find((cartItem: any) => cartItem.item === item).count}</span>
+                  <span className=" p-2 font-bold text-white flex self-center">{cart.find((cartItem: any) => cartItem.item === item).count}</span>
 
                   <button
-                    className="p-2 red-espresso text-white"
+                    className="p-2 red-espresso text-white flex self-center"
                     onClick={() =>
                       handleCartUpdate(
                         item,

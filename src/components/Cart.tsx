@@ -46,6 +46,7 @@ export default function Cart() {
           <div className="menu-items p-4">
             {cart.map((item:any) => (
               <div key={item.item} className="menu-item">
+                <img src={`/menu/${item.item}.webp`} className="h-16" />
                 <p className="font-bold text-2xl">{item.item}</p>
                 <div className="flex gap-2">
                   <p className="flex self-center font-bold">

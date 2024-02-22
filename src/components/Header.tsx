@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="flex justify-between top-0 red-espresso text-white p-2 px-6">
       <div className="flex flex-col justify-center">
-        <p className="font-bold text-xl">jack boeri</p>
+        <p className="font-bold text-xl">My Points</p>
         <p className="text-center">920 Points</p>
       </div>
       <div className="flex flex-col justify-center">

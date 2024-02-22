@@ -1,19 +1,27 @@
 import { useContext } from "react";
 import Header from "./Header";
 import QRCode from "./QRCode";
+import Card from "./Card"; // Assuming you have a Card component
 import { AppContext } from "../App";
 
 export default function Home() {
-  const { view, setView } = useContext(AppContext);
+  const { setView } = useContext(AppContext);
 
   return (
     <div className="container">
-      {/* Added container class */}
       <Header />
+      <div className="flex flex-col justify-center items-center p-4">
+  <h1 className="text-3xl text-center text-red-600 font-bold">
+    Welcome back, Jack Boeri!
+  </h1>
+  <p className="text-lg text-center text-gray-700">
+    Scan your QR code to earn points on your next purchase.
+  </p>
+</div>
       <div className="flex justify-center">
         <QRCode />
       </div>
-      <div className="flex gap-4 justify-center">
+      <div className="flex justify-center items-center gap-4">
         <button
           onClick={() =>
             setView((prevView:any) => ({ ...prevView, page: "deals" }))
@@ -30,6 +38,28 @@ export default function Home() {
         >
           Order
         </button>
+      </div>
+      <div className="flex flex-col gap-6 mt-4 p-6">
+        <Card
+          type="full-width"
+          image="/menu/financial.webp"
+          caption="Kickstart your earnings with 5,000 extra points
+With a new Tims® Mastercard® you get 2,000 extra points on your first purchase in month one, and 1,000 extra for each month you spend $200 or more in the first 3 months.*"
+        />
+        <Card
+          type="full-width"
+          image="/menu/financial.webp"
+          caption="Kickstart your earnings with 5,000 extra points
+With a new Tims® Mastercard® you get 2,000 extra points on your first purchase in month one, and 1,000 extra for each month you spend $200 or more in the first 3 months.*"
+        />
+        <Card
+          type="full-width"
+          image="/menu/financial.webp"
+          caption="Kickstart your earnings with 5,000 extra points
+With a new Tims® Mastercard® you get 2,000 extra points on your first purchase in month one, and 1,000 extra for each month you spend $200 or more in the first 3 months.*"
+        />
+
+        <div className="grid grid-cols-2 gap-4"></div>
       </div>
     </div>
   );
