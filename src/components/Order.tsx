@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import Header from "./Header";
 import { menu } from "../db/menu.js";
 import { AppContext } from "../App.js";
+import { useEffect } from 'react';
 
 export default function Order() {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -54,6 +55,7 @@ export default function Order() {
     }
 
     const items = Object.keys(menu[selectedCategory]);
+    console.log(items);
 
     return (
       <div className="menu-items">
@@ -72,7 +74,8 @@ export default function Order() {
         <h2 className="font-bold text-2xl text-center p-2">{selectedCategory}</h2>
         {items.map((item) => (
           <div key={item} className="menu-item">
-            <p className="font-bold text-2xl">
+            <img src={`/menu/${item}.webp`} className="h-16" />
+            <p className="flex self-center font-bold text-2xl">
               {menu[selectedCategory][item].name}
             </p>
             <div className="flex gap-2">
