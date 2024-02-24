@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import Header from "./Header";
+import { useContext, useState } from "react";
 import { AppContext } from "../App";
 
 export default function Deals() {

@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Header from "./Header";
 import QRCode from "./QRCode";
 import Card from "./Card"; // Assuming you have a Card component
 import { AppContext } from "../App";

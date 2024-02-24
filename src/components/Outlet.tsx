@@ -9,7 +9,7 @@ import Cart from "./Cart";
 import Header from "./Header";
 
 export default function Outlet() {
-  const { view, setView } = useContext(AppContext);
+  const { view } = useContext(AppContext);
 
   return (<>
     <Header />

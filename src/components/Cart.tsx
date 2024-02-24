@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
-import Header from "./Header";
 
 export default function Cart() {
   const { view, setView } = useContext(AppContext);
