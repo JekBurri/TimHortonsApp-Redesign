@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import Header from "./Header";
 import { menu } from "../db/menu.js";
 import { AppContext } from "../App.js";
 
@@ -128,7 +127,6 @@ export default function Order() {
 
   return (
     <div className="container creamy-latte">
-      <Header />
       <div className="mt-8 p-10">
         <p className="text-3xl font-bold mb-4">Menu</p>
         {renderMenuItems()}

@@ -39,7 +39,6 @@ export default function Cart() {
 
   return (
     <div className="container mx-auto">
-      <Header />
       <div className="mt-8 p-10">
         <p className="text-3xl font-bold mb-4">Your Cart</p>
         {cart.length > 0 ? (

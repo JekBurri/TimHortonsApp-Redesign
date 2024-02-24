@@ -6,11 +6,13 @@ import Scan from "./Scan";
 import Order from "./Order";
 import Checkout from "./Checkout";
 import Cart from "./Cart";
+import Header from "./Header";
 
 export default function Outlet() {
   const { view, setView } = useContext(AppContext);
 
-  return (
+  return (<>
+    <Header />
     <div className="flex-1 overflow-y-auto">
       {view.page === "home" ? (
         <Home />
@@ -28,5 +30,5 @@ export default function Outlet() {
         <div>404</div>
       )}
     </div>
-  );
+    </>);
 }

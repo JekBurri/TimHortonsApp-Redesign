@@ -16,7 +16,6 @@ export default function Deals() {
 
   return (
     <div className="container mx-auto">
-      <Header />
       <div className="mt-8 p-10">
         <h1 className="text-3xl font-bold mb-4">Deals</h1>
         <div className="flex gap-4">
