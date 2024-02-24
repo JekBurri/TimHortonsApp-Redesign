@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="container">
       <div className="flex flex-col justify-center items-center p-4">
-        <h1 className="text-3xl text-center text-red-600 font-bold">
+        <h1 className="text-2xl text-center text-red-600 font-bold">
           Welcome back, Jack Boeri!
         </h1>
         <p className="text-lg text-center text-gray-700">
