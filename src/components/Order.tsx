@@ -38,7 +38,7 @@ export default function Order() {
   }
 
   const renderMenuButtons = () => {
-    const categories = Object.keys(menu);
+    // const categories = Object.keys(menu);
 
     return (
       <div className="grid grid-cols-2 p-10">
