@@ -44,19 +44,9 @@ export const menu:any = {
             "name": "Iced Coffee",
             "cost": 2.92,
         },
-        "icedamericano": {
-            "img": "icedamericano.webp",
-            "name": "Iced Americano",
-            "cost": 3.92,
-        },
         "icedlatte": {
             "img": "icedlatte.webp",
             "name": "Iced Latte",
-            "cost": 3.92,
-        },
-        "icedcappuccino": {
-            "img": "icedcappuccino.webp",
-            "name": "Iced Cappuccino",
             "cost": 3.92,
         },
         "icedmocha": {
@@ -74,10 +64,20 @@ export const menu:any = {
             "name": "Iced Caramel Latte",
             "cost": 3.99,
         },
-        "icedspecialtytea": {
-            "img": "icedspecialtytea.webp",
-            "name": "Iced Specialty Tea",
-            "cost": 2.92,
+        "icedcapp": {
+            "img": "icedcapp.webp",
+            "name": "Original Iced Capp",
+            "cost": 3.59,
+        },
+        "mochaicedcapp": {
+            "img": "mochaicedcapp.webp",
+            "name": "Mocha Iced Capp",
+            "cost": 4.49,
+        },
+        "vanillaicedcapp": {
+            "img": "vanillaicedcapp.webp",
+            "name": "Iced Vanilla Capp",
+            "cost": 4.49,
         },
     },
     "donuts": {

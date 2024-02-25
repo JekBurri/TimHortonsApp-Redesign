@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { menu } from "../db/menu.js";
 import { AppContext } from "../App.js";
+import Card from "./Card";
 
 export default function Order() {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -29,21 +30,35 @@ export default function Order() {
     }));
   };
 
+  function getFirstMenuItem(category: string): any | undefined {
+    const keys = Object.keys(menu[category]);
+    const firstIndex = keys[0];
+
+    return firstIndex + ".webp";
+  }
+
   const renderMenuButtons = () => {
     const categories = Object.keys(menu);
 
     return (
-      <div className="flex flex-col gap-4 p-10">
-        {categories.map((category) => (
-          <button
+      <div className="grid grid-cols-2 p-10">
+      {Object.entries(menu).map(([category]) => (
+        <div key={category} className="flex flex-col p-6" onClick={() => handleCategoryClick(category)}>
+          {/* Card component */}
+          <Card
             key={category}
-            onClick={() => handleCategoryClick(category)}
-            className="category-button text-xl"
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+            type="full-width"
+            // Use the first item's img property if available
+            image={"/menu/" + getFirstMenuItem(category)}
+            title={category}
+            caption=""
+          />
+    
+         
+        </div>
+      ))}
+    </div>
+    
     );
   };
 
@@ -58,11 +73,16 @@ export default function Order() {
     return (
       <div className="menu-items">
         <div className="flex gap-4">
-            <button onClick={handleBackButtonClick} className="rounded-lg p-2 text-2xl red-espresso text-white font-bold">
+          <button
+            onClick={handleBackButtonClick}
+            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
+          >
             Back
-            </button>
+          </button>
         </div>
-        <h2 className="font-bold text-2xl text-center p-2">{selectedCategory}</h2>
+        <h2 className="font-bold text-2xl text-center p-2">
+          {selectedCategory}
+        </h2>
         {items.map((item) => (
           <div key={item} className="menu-item">
             <img src={`/menu/${item}.webp`} className="h-16" />
@@ -73,7 +93,9 @@ export default function Order() {
               <p className="flex self-center font-bold">
                 ${menu[selectedCategory][item].cost.toFixed(2)}
               </p>
-              {cart.find((cartItem: any) => cartItem.item === item && cartItem.count > 0 ) ? (
+              {cart.find(
+                (cartItem: any) => cartItem.item === item && cartItem.count > 0
+              ) ? (
                 <div className="flex red-espresso rounded-md">
                   <button
                     className="p-2 red-espresso text-white flex self-center"
@@ -87,7 +109,9 @@ export default function Order() {
                   >
                     -
                   </button>
-                  <span className=" p-2 font-bold text-white flex self-center">{cart.find((cartItem: any) => cartItem.item === item).count}</span>
+                  <span className=" p-2 font-bold text-white flex self-center">
+                    {cart.find((cartItem: any) => cartItem.item === item).count}
+                  </span>
 
                   <button
                     className="p-2 red-espresso text-white flex self-center"
@@ -101,7 +125,6 @@ export default function Order() {
                   >
                     +
                   </button>
-                  
                 </div>
               ) : (
                 <button
@@ -123,8 +146,6 @@ export default function Order() {
       <div className="mt-8 p-10">
         <p className="text-3xl font-bold mb-4">Menu</p>
         {renderMenuItems()}
-
-        
       </div>
     </div>
   );
