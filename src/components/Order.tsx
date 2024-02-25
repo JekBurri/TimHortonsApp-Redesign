@@ -61,13 +61,6 @@ export default function Order() {
             <button onClick={handleBackButtonClick} className="rounded-lg p-2 text-2xl red-espresso text-white font-bold">
             Back
             </button>
-            <button
-            onClick={() => setView({ ...view, page: "checkout" })}
-            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
-            >
-            Checkout
-            </button>
-
         </div>
         <h2 className="font-bold text-2xl text-center p-2">{selectedCategory}</h2>
         {items.map((item) => (
