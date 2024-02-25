@@ -41,9 +41,9 @@ export default function Order() {
     // const categories = Object.keys(menu);
 
     return (
-      <div className="flex flex-col p-10">
+      <div className="flex flex-col">
       {Object.entries(menu).map(([category]) => (
-        <div key={category} className="flex flex-col p-6" onClick={() => handleCategoryClick(category)}>
+        <div key={category} className="flex flex-col p-4" onClick={() => handleCategoryClick(category)}>
           {/* Card component */}
           <Card
             key={category}
