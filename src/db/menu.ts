@@ -81,40 +81,28 @@ export const menu:any = {
         },
     },
     "donuts": {
-        "glazeddonut": {
-            "name": "Glazed Donut",
+        "honeydip": {
+            "name": "Honey Dip",
             "cost": 1.50,
         },
-        "chocolatedonut": {
-            "name": "Chocolate Donut",
+        "chocolatedip": {
+            "name": "Chocolate Dip",
             "cost": 1.50,
         },
-        "strawberrydonut": {
-            "name": "Strawberry Donut",
+        "honeycruller": {
+            "name": "Honey Cruller",
             "cost": 1.50,
         },
-        "bavariandonut": {
-            "name": "Bavarian Donut",
-            "cost": 1.50,
-        },
-        "sugardonut": {
-            "name": "Sugar Donut",
-            "cost": 1.50,
-        },
-        "frenchcruller": {
-            "name": "French Cruller",
-            "cost": 1.50,
-        },
-        "chocolatesprinkles": {
-            "name": "Chocolate Sprinkles",
+        "chocolateglazed": {
+            "name": "Chocolate Glazed",
             "cost": 1.50,
         },
         "vanilladip": {
             "name": "Vanilla Dip",
             "cost": 1.50,
         },
-        "honeydip": {
-            "name": "Honey Dip",
+        "doublechocolate": {
+            "name": "Double Chocolate",
             "cost": 1.50,
         },
         "oldfashioned": {
@@ -123,30 +111,32 @@ export const menu:any = {
         }
     },
     "bagels": {
-        "plainbagel": {
+        "plain": {
             "name": "Plain Bagel",
-            "cost": 1.50,
+            "cost": 2.19,
         },
-        "sesamebagel": {
-            "name": "Sesame Bagel",
-            "cost": 1.50,
+        "fourcheese": {
+            "name": "Four Cheese Bagel",
+            "cost": 2.19,
         },
-        "everythingbagel": {
+        "everything": {
             "name": "Everything Bagel",
-            "cost": 1.50,
+            "cost": 2.19,
         },
-        "blueberrybagel": {
-            "name": "Blueberry Bagel",
-            "cost": 1.50,
+        "cinnamonraisin": {
+            "name": "Cinnamon Raisin Bagel",
+            "cost": 2.19,
         },
-        "wholewheatbagel": {
+        
+        "12grain": {
             "name": "Whole Wheat Bagel",
-            "cost": 1.50,
+            "cost": 2.19,
         },
-        "multigrainbagel": {
-            "name": "Multigrain Bagel",
-            "cost": 1.50,
-        }
+        "creamcheese": {
+            "name": "PHILADELPHIA Cream Cheese",
+            "cost": 3.49,
+        },
+       
     },
     "sandwiches": {
         "hamandcheese": {
