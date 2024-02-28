@@ -8,15 +8,15 @@ export default function Home() {
 
   return (
     <div className="container">
-      <div className="flex flex-col justify-center items-center p-4">
-        <h1 className="text-2xl text-center text-red-600 font-bold">
-          Welcome back, Jack Boeri!
+      <div className="items-center p-6">
+        <h1 className="text-4xl text-red-600 font-bold">
+          Welcome back, Jack!
         </h1>
-        <p className="text-lg text-center text-gray-700">
-          Scan your QR code to earn points on your next purchase.
+        <p className="text-md">
+          Scan the QR code to earn points on your next purchase.
         </p>
       </div>
-      <div className="flex gap-4 py-4 px-8">
+      <div className="flex gap-6 px-7">
         <QRCode />
         <div className="flex flex-col gap-2">
           <p className="text-2xl text-center text-red-600 font-bold">
@@ -26,28 +26,28 @@ export default function Home() {
             onClick={() =>
               setView((prevView: any) => ({ ...prevView, page: "order" }))
             }
-            className="rounded-lg p-2 text-lg red-espresso text-white font-bold"
+            className="shadow-md rounded-lg p-2 text-md red-espresso text-white font-bold"
           >
             Order Now
           </button>
-          <button className="rounded-lg p-2 text-lg red-espresso text-white font-bold">
+          <button className="shadow-md rounded-lg p-2 text-md red-espresso text-white font-bold">
             Earn Points
           </button>
           <button
             onClick={() =>
               setView((prevView: any) => ({ ...prevView, page: "deals" }))
             }
-            className="rounded-lg p-2 text-lg red-espresso text-white font-bold"
+            className="shadow-md first-letter:rounded-lg p-2 text-md red-espresso text-white font-bold"
           >
             View Deals
           </button>
-          <button className="rounded-lg p-2 text-lg red-espresso text-white font-bold">
+          <button className="shadow-md rounded-lg p-2 text-md red-espresso text-white font-bold">
             Redeem Points
           </button>
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 mt-4 p-6">
+      <div className="flex flex-col gap-6 p-6">
         <Card
           type="full-width"
           image="/menu/financial.webp"
