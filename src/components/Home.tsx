@@ -16,12 +16,9 @@ export default function Home() {
           Scan the QR code to earn points on your next purchase.
         </p>
       </div>
-      <div className="flex gap-6 px-7">
+      <div className="flex flex-col gap-6 px-7">
         <QRCode />
-        <div className="flex flex-col gap-2">
-          <p className="text-2xl text-center text-red-600 font-bold">
-            You have 920 points!
-          </p>
+        <div className="flex justify-center gap-2">
           <button
             onClick={() =>
               setView((prevView: any) => ({ ...prevView, page: "order" }))
@@ -37,7 +34,7 @@ export default function Home() {
             onClick={() =>
               setView((prevView: any) => ({ ...prevView, page: "deals" }))
             }
-            className="shadow-md first-letter:rounded-lg p-2 text-md red-espresso text-white font-bold"
+            className="rounded-lg shadow-md first-letter:rounded-lg p-2 text-md red-espresso text-white font-bold"
           >
             View Deals
           </button>
