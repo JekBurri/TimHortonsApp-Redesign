@@ -9,38 +9,44 @@ export default function Home() {
   return (
     <div className="container">
       <div className="items-center p-6">
-        <h1 className="text-4xl text-red-600 font-bold">
-          Welcome back, Jack!
-        </h1>
+        <h1 className="text-4xl text-red-600 font-bold">Welcome back, Jack!</h1>
         <p className="text-md">
           Scan the QR code to earn points on your next purchase.
         </p>
       </div>
-      <div className="flex flex-col gap-6 px-7">
+      <div className="flex flex-col gap-4 px-7">
         <QRCode />
-        <div className="flex justify-center gap-2">
-          <button
-            onClick={() =>
-              setView((prevView: any) => ({ ...prevView, page: "order" }))
-            }
-            className="shadow-md rounded-lg p-2 text-md red-espresso text-white font-bold"
-          >
-            Order Now
-          </button>
-          <button className="shadow-md rounded-lg p-2 text-md red-espresso text-white font-bold">
-            Earn Points
-          </button>
-          <button
-            onClick={() =>
-              setView((prevView: any) => ({ ...prevView, page: "deals" }))
-            }
-            className="rounded-lg shadow-md first-letter:rounded-lg p-2 text-md red-espresso text-white font-bold"
-          >
-            View Deals
-          </button>
-          <button className="shadow-md rounded-lg p-2 text-md red-espresso text-white font-bold">
-            Redeem Points
-          </button>
+        <div className="flex justify-center gap-4">
+          <div className="flex flex-col gap-4">
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <p className="text-2xl text-red-600">Mini-Games</p>
+              <p>Earn points by playing your favorite Tims minigame!</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <p className="text-2xl text-red-600">Community</p>
+              <p>See how Tims contributes to the community...</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col flex-1 gap-4">
+            <button
+              onClick={() =>
+                setView((prevView: any) => ({ ...prevView, page: "order" }))
+              }
+              className="flex-1 shadow-md rounded-lg p-4 text-md red-espresso text-white font-bold"
+            >
+              Order Now
+            </button>
+
+            <button
+              onClick={() =>
+                setView((prevView: any) => ({ ...prevView, page: "deals" }))
+              }
+              className="flex-1 rounded-lg shadow-md p-4 text-md red-espresso text-white font-bold"
+            >
+              View Deals
+            </button>
+          </div>
         </div>
       </div>
 

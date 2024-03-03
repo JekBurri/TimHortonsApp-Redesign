@@ -138,32 +138,5 @@ export const menu:any = {
         },
        
     },
-    "sandwiches": {
-        "hamandcheese": {
-            "name": "Ham and Cheese",
-            "cost": 3.50,
-        },
-        "chickenandcheese": {
-            "name": "Chicken and Cheese",
-            "cost": 3.50,
-        },
-        "eggandcheese": {
-            "name": "Egg and Cheese",
-            "cost": 3.50,
-        },
-        "baconandegg": {
-            "name": "Bacon and Egg",
-            "cost": 3.50,
-        },
-    },
-    "wraps": {
-        "chickenwrap": {
-            "name": "Chicken Wrap",
-            "cost": 3.50,
-        },
-        "eggandcheesewrap": {
-            "name": "Egg and Cheese Wrap",
-            "cost": 3.50,
-        },
-    }
+   
 }
