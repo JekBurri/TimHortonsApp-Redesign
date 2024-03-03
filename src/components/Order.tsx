@@ -67,20 +67,6 @@ export default function Order() {
 
     return (
       <div className="menu-items">
-        <div className="flex justify-center py-4 gap-4">
-          <button
-            onClick={handleBackButtonClick}
-            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
-          >
-            Go Back
-          </button>
-          <button
-            onClick={() => setView({ ...view, page: "cart" })}
-            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
-          >
-            Order Now
-          </button>
-        </div>
         <h2 className="font-bold text-2xl text-center p-2">
           {selectedCategory}
         </h2>
@@ -138,6 +124,20 @@ export default function Order() {
             </div>
           </div>
         ))}
+        <div className="flex justify-center py-4 gap-4">
+          <button
+            onClick={handleBackButtonClick}
+            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
+          >
+            Go Back
+          </button>
+          <button
+            onClick={() => setView({ ...view, page: "cart" })}
+            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
+          >
+            Checkout
+          </button>
+        </div>
       </div>
     );
   };
@@ -145,11 +145,12 @@ export default function Order() {
   return (
     <div className="container creamy-latte">
       <div className="mt-8 p-10">
-        <div className="flex justify-center gap-2 mb-10">
+        <div className="flex justify-center gap-2 mb-2 bg-white p-4 rounded-lg">
           <p className="flex self-center justify-center text-bold text-xl">Chosen Store: 920 Steveston Highway</p>
           <button className="p-2 red-espresso text-white flex self-center rounded-md">Change Store</button>
         </div>
-      {renderMenuItems()}</div>
+      {renderMenuItems()}
+      </div>
     </div>
   );
 }
