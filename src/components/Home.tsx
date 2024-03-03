@@ -49,8 +49,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col gap-6 p-6">
+      <h1 className="text-3xl text-red-600 font-bold">Discover</h1>
         <Card
           type="full-width"
           image="/menu/financial.webp"

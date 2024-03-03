@@ -1,6 +1,6 @@
 export default function QRCode() {
   return (
-    <div className="flex gap-4 self-center">
+    <div className="flex justify-between">
       <div className="p-4 bg-white rounded-lg shadow-md">
         <img
           className="w-auto"
@@ -9,7 +9,7 @@ export default function QRCode() {
         />
       </div>
       <div className="flex flex-col gap-4">
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 flex-1 bg-white rounded-lg shadow-md">
           <div className="mb-4">
             <p className="text-2xl font-bold text-red-600 mb-2">
               Scan Type
