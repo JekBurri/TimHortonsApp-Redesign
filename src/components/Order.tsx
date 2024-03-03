@@ -41,24 +41,19 @@ export default function Order() {
     // const categories = Object.keys(menu);
 
     return (
-      <div className="flex flex-col">
+      <div className="grid grid-cols-2 gap-4">
       {Object.entries(menu).map(([category]) => (
-        <div key={category} className="flex flex-col p-4" onClick={() => handleCategoryClick(category)}>
-          {/* Card component */}
-          <Card
-            key={category}
-            type="full-width"
-            // Use the first item's img property if available
-            image={"/menu/" + getFirstMenuItem(category)}
-            title={category}
-            caption=""
-          />
-    
-         
+        <div
+          key={category}
+          onClick={() => handleCategoryClick(category)}
+        >
+          <div className="flex bg-white rounded-lg shadow-md p-4">
+            <img src={"/menu/" + getFirstMenuItem(category)} alt={""} className="h-14" />
+            <h2 className="flex self-center text-lg py-2 font-bold">{category}</h2>
+          </div>
         </div>
       ))}
     </div>
-    
     );
   };
 
@@ -72,12 +67,18 @@ export default function Order() {
 
     return (
       <div className="menu-items">
-        <div className="flex gap-4">
+        <div className="flex justify-center py-4 gap-4">
           <button
             onClick={handleBackButtonClick}
             className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
           >
-            Back
+            Go Back
+          </button>
+          <button
+            onClick={() => setView({ ...view, page: "cart" })}
+            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
+          >
+            Order Now
           </button>
         </div>
         <h2 className="font-bold text-2xl text-center p-2">
@@ -128,10 +129,10 @@ export default function Order() {
                 </div>
               ) : (
                 <button
-                  className="p-2 red-espresso text-white"
+                  className=" red-espresso rounded-lg text-white text-2xl p-2"
                   onClick={() => handleCartUpdate(item, 1)}
                 >
-                  Add
+                  +
                 </button>
               )}
             </div>
@@ -144,9 +145,11 @@ export default function Order() {
   return (
     <div className="container creamy-latte">
       <div className="mt-8 p-10">
-        <p className="text-3xl font-bold mb-4">Menu</p>
-        {renderMenuItems()}
-      </div>
+        <div className="flex justify-center gap-2 mb-10">
+          <p className="flex self-center justify-center text-bold text-xl">Chosen Store: 920 Steveston Highway</p>
+          <button className="p-2 red-espresso text-white flex self-center rounded-md">Change Store</button>
+        </div>
+      {renderMenuItems()}</div>
     </div>
   );
 }

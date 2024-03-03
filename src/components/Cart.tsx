@@ -50,7 +50,7 @@ export default function Cart() {
                   <p className="flex self-center font-bold">
                     ${item.price}
                   </p>
-                  <div className="red-espresso">
+                  <div className="red-espresso rounded-md p-2">
                     <button
                       className="p-2 red-espresso text-white"
                       onClick={() => handleCartUpdate(item.item, item.count - 1)}

@@ -13,7 +13,7 @@ export default function Navbar() {
             </div>
             <div onClick={()=>setView({...view, page:"order"})} className="flex flex-col justify-center">
                 <img src="/navbar/paper-cup.png" className="flex self-center justify-center align-middle h-10" alt="" />
-                <span className="text-center">Menu</span>
+                <span className="text-center">Order</span>
             </div>
             <div onClick={()=>setView({...view, page:"deals"})} className="flex flex-col justify-center">
                 <img src="/navbar/discount.png" className="flex self-center justify-center align-middle h-10" alt="" />
