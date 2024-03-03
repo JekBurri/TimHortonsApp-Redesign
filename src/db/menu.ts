@@ -1,6 +1,6 @@
 export const menu:any = {
     
-    "hotbeverages": {
+    "Hot Beverages": {
         "brewedcoffee" : {
             "name": "Brewed Coffee",
             "cost": 1.92,
@@ -38,7 +38,7 @@ export const menu:any = {
             "cost": 3.20,
         }
     },
-    "coldbeverages": {
+    "Cold Beverages": {
         "icedcoffee": {
             "img": "icedcoffee.webp",
             "name": "Iced Coffee",
@@ -80,7 +80,7 @@ export const menu:any = {
             "cost": 4.49,
         },
     },
-    "donuts": {
+    "Donuts": {
         "honeydip": {
             "name": "Honey Dip",
             "cost": 1.50,
@@ -110,7 +110,7 @@ export const menu:any = {
             "cost": 1.50,
         }
     },
-    "bagels": {
+    "Bagels": {
         "plain": {
             "name": "Plain Bagel",
             "cost": 2.19,
