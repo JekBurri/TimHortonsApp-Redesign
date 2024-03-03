@@ -19,11 +19,11 @@ export default function Home() {
         <div className="flex justify-center gap-4">
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white rounded-lg shadow-md">
-              <p className="text-2xl text-red-600">Mini-Games</p>
+              <p className="text-2xl font-bold text-red-600">Mini-Games</p>
               <p>Earn points by playing your favorite Tims minigame!</p>
             </div>
             <div className="p-4 bg-white rounded-lg shadow-md">
-              <p className="text-2xl text-red-600">Community</p>
+              <p className="text-2xl font-bold text-red-600">Community</p>
               <p>See how Tims contributes to the community...</p>
             </div>
           </div>
