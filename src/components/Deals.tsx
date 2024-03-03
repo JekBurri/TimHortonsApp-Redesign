@@ -62,6 +62,12 @@ export default function Deals() {
             </div>
           </div>
         </div>
+        <button
+            onClick={() => setView((prevView: any) => ({ ...prevView, page: "home" }))}
+            className="rounded-lg mt-4 p-2 text-2xl red-espresso text-white font-bold"
+          >
+            Go Back
+          </button>
       </div>
     </div>
   );

@@ -124,20 +124,7 @@ export default function Order() {
             </div>
           </div>
         ))}
-        <div className="flex justify-center py-4 gap-4">
-          <button
-            onClick={handleBackButtonClick}
-            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
-          >
-            Go Back
-          </button>
-          <button
-            onClick={() => setView({ ...view, page: "cart" })}
-            className="rounded-lg p-2 text-2xl red-espresso text-white font-bold"
-          >
-            Checkout
-          </button>
-        </div>
+        
       </div>
     );
   };
@@ -150,6 +137,21 @@ export default function Order() {
           <button className="p-2 red-espresso text-white flex self-center rounded-md">Change Store</button>
         </div>
       {renderMenuItems()}
+      <div className="flex justify-between">
+        <button
+              onClick={() => setView((prevView: any) => ({ ...prevView, page: "home" }))}
+              className="rounded-lg mt-4 p-2 text-2xl red-espresso text-white font-bold"
+            >
+              Go Back
+            </button>
+            <button
+              onClick={() => setView({ ...view, page: "cart" })}
+              className="rounded-lg p-2 mt-4 text-2xl red-espresso text-white font-bold"
+            >
+              Checkout
+            </button>
+
+      </div>
       </div>
     </div>
   );
