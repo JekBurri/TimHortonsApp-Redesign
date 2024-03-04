@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { menu } from "../db/menu.js";
 import { AppContext } from "../App.js";
-import Card from "./Card";
+// import Card from "./Card";
 
 export default function Order() {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -139,7 +139,8 @@ export default function Order() {
       {renderMenuItems()}
       <div className="flex justify-between">
         <button
-              onClick={() => setView((prevView: any) => ({ ...prevView, page: "home" }))}
+              onClick={() => {setView((prevView: any) => ({ ...prevView, page: "home" }))
+              setSelectedCategory(null)}}
               className="rounded-lg mt-4 p-2 text-2xl red-espresso text-white font-bold"
             >
               Go Back
