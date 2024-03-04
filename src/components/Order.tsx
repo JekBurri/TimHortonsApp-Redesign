@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { menu } from "../db/menu.js";
 import { AppContext } from "../App.js";
-// import Card from "./Card";
 
 export default function Order() {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -12,9 +11,7 @@ export default function Order() {
     setSelectedCategory(category);
   };
 
-  const handleBackButtonClick = () => {
-    setSelectedCategory(null);
-  };
+
 
   const handleCartUpdate = (item: any, count: any) => {
     setView((prevView: any) => ({
